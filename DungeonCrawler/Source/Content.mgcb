@@ -1,0 +1,126 @@
+
+#----------------------------- Global Properties ----------------------------#
+
+/outputDir:bin/$(Platform)
+/intermediateDir:obj/$(Platform)
+/platform:DesktopGL
+/config:
+/profile:Reach
+/compress:False
+
+#-------------------------------- References --------------------------------#
+
+
+#---------------------------------- Content ---------------------------------#
+
+#begin Resources/Fonts/UI.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/processorParam:Version=3.8.5.0
+/build:Resources/Fonts/UI.spritefont
+
+#begin Resources/Sprites/SpriteSheets/character.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/processorParam:Version=3.8.5.0
+/build:Resources/Sprites/SpriteSheets/character.png;Resources/Sprites/SpriteSheets/character
+
+#begin Resources/Sprites/SpriteSheets/feat.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/processorParam:Version=3.8.5.0
+/build:Resources/Sprites/SpriteSheets/feat.png;Resources/Sprites/SpriteSheets/feat
+
+#begin Resources/Sprites/SpriteSheets/floor.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/processorParam:Version=3.8.5.0
+/build:Resources/Sprites/SpriteSheets/floor.png;Resources/Sprites/SpriteSheets/floor
+
+#begin Resources/Sprites/SpriteSheets/gui.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/processorParam:Version=3.8.5.0
+/build:Resources/Sprites/SpriteSheets/gui.png;Resources/Sprites/SpriteSheets/gui
+
+#begin Resources/Sprites/SpriteSheets/icons.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/processorParam:Version=3.8.5.0
+/build:Resources/Sprites/SpriteSheets/icons.png;Resources/Sprites/SpriteSheets/icons
+
+#begin Resources/Sprites/SpriteSheets/main.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/processorParam:Version=3.8.5.0
+/build:Resources/Sprites/SpriteSheets/main.png;Resources/Sprites/SpriteSheets/main
+
+#begin Resources/Sprites/SpriteSheets/wall.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/processorParam:Version=3.8.5.0
+/build:Resources/Sprites/SpriteSheets/wall.png;Resources/Sprites/SpriteSheets/wall
+
+#begin Resources/XMLs/accessory-prefabs.xml
+/copy:Resources/XMLs/accessory-prefabs.xml
+
+#begin Resources/XMLs/character-prefabs.xml
+/copy:Resources/XMLs/character-prefabs.xml
+
+#begin Resources/XMLs/floor-tile-prefabs.xml
+/copy:Resources/XMLs/floor-tile-prefabs.xml
+
+#begin Resources/XMLs/wall-tile-prefabs.xml
+/copy:Resources/XMLs/wall-tile-prefabs.xml
+

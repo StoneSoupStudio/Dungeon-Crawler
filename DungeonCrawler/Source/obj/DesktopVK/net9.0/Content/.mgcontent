@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopVK</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/User/source/repos/DungeonCrawler/Source/Resources/Fonts/UI.spritefont</File>
+    <File>C:/Users/User/source/repos/DungeonCrawler/Source/Resources/Sprites/SpriteSheets/character.png</File>
+    <File>C:/Users/User/source/repos/DungeonCrawler/Source/Resources/Sprites/SpriteSheets/feat.png</File>
+    <File>C:/Users/User/source/repos/DungeonCrawler/Source/Resources/Sprites/SpriteSheets/floor.png</File>
+    <File>C:/Users/User/source/repos/DungeonCrawler/Source/Resources/Sprites/SpriteSheets/gui.png</File>
+    <File>C:/Users/User/source/repos/DungeonCrawler/Source/Resources/Sprites/SpriteSheets/icons.png</File>
+    <File>C:/Users/User/source/repos/DungeonCrawler/Source/Resources/Sprites/SpriteSheets/main.png</File>
+    <File>C:/Users/User/source/repos/DungeonCrawler/Source/Resources/Sprites/SpriteSheets/wall.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File>Resources/Sprites/SpriteSheets/character</File>
+    <File>Resources/Sprites/SpriteSheets/feat</File>
+    <File>Resources/Sprites/SpriteSheets/floor</File>
+    <File>Resources/Sprites/SpriteSheets/gui</File>
+    <File>Resources/Sprites/SpriteSheets/icons</File>
+    <File>Resources/Sprites/SpriteSheets/main</File>
+    <File>Resources/Sprites/SpriteSheets/wall</File>
+  </DestFiles>
+</SourceFileCollection>

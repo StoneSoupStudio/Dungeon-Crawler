@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas>
+	<Texture>sprites/spritesheets/wall</Texture>
+	<Regions>
+		<Region name="gray-wall-tile-1" x="256" y="32" width="Tile.TILE_SIZE" height="Tile.TILE_SIZE"/>
+	</Regions>
+</TextureAtlas>

@@ -1,0 +1,703 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\scripts\\generate\\dungeongeneration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\scripts\\generate\\dungeongeneration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\scripts\\ui\\canvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\scripts\\ui\\canvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\scripts\\generate\\tile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\scripts\\generate\\tile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\scripts\\graphics\\auxiliary\\textureatlas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\scripts\\graphics\\auxiliary\\textureatlas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\resources\\xmls\\wall-tile-prefabs.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\resources\\xmls\\wall-tile-prefabs.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\resources\\xmls\\floor-tile-prefabs.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\resources\\xmls\\floor-tile-prefabs.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\scripts\\engine\\core.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\scripts\\engine\\core.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\resources\\xmls\\character-prefabs.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\resources\\xmls\\character-prefabs.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\resources\\xmls\\accessory-prefabs.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\resources\\xmls\\accessory-prefabs.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\scripts\\character\\players\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\scripts\\character\\players\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\scripts\\character\\players\\playerdatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\scripts\\character\\players\\playerdatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\scripts\\character\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\scripts\\character\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\scripts\\character\\players\\playerbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\scripts\\character\\players\\playerbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\scripts\\graphics\\layer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\scripts\\graphics\\layer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\scripts\\graphics\\animatedsprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\scripts\\graphics\\animatedsprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\scripts\\graphics\\auxiliary\\textureregion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\scripts\\graphics\\auxiliary\\textureregion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\scripts\\graphics\\auxiliary\\animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\scripts\\graphics\\auxiliary\\animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\scripts\\graphics\\auxiliary\\spriteattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\scripts\\graphics\\auxiliary\\spriteattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\scripts\\character\\accessories\\accessory\\greencloack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\scripts\\character\\accessories\\accessory\\greencloack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\scripts\\character\\accessories\\accessory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\scripts\\character\\accessories\\accessory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\scripts\\character\\accessories\\autoloadequipattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\scripts\\character\\accessories\\autoloadequipattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\scripts\\engine\\camera2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\scripts\\engine\\camera2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\scripts\\character\\accessories\\accessory\\redboots.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\scripts\\character\\accessories\\accessory\\redboots.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\scripts\\graphics\\sprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\scripts\\graphics\\sprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\scripts\\globalusing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\scripts\\globalusing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\scripts\\input\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\scripts\\input\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\dungeoncrawler.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:dungeoncrawler.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\scripts\\imgui\\imguirenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\scripts\\imgui\\imguirenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\resources\\sprites\\spritesheets\\character.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\resources\\sprites\\spritesheets\\character.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\resources\\sprites\\spritesheets\\main.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\resources\\sprites\\spritesheets\\main.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\resources\\sprites\\spritesheets\\feat.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\resources\\sprites\\spritesheets\\feat.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\resources\\sprites\\spritesheets\\floor.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\resources\\sprites\\spritesheets\\floor.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\resources\\sprites\\spritesheets\\icons.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\resources\\sprites\\spritesheets\\icons.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\resources\\sprites\\spritesheets\\gui.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\resources\\sprites\\spritesheets\\gui.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\scripts\\input\\mouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\scripts\\input\\mouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\scripts\\input\\keyboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\scripts\\input\\keyboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|c:\\users\\user\\source\\repos\\dungeoncrawler\\source\\scripts\\imgui\\drawvertdeclaration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A64ABD-5D23-402B-AC6A-3E3E6344FC16}|DungeonCrawler.csproj|solutionrelative:source\\scripts\\imgui\\drawvertdeclaration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 231,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 56,
+          "SelectedChildIndex": 29,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6d4078d1-5951-4ed1-ac0e-0a8099c1cce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:7:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:6:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:5:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "wall-tile-prefabs.xml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Resources\\XMLs\\wall-tile-prefabs.xml",
+              "RelativeDocumentMoniker": "Source\\Resources\\XMLs\\wall-tile-prefabs.xml",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Resources\\XMLs\\wall-tile-prefabs.xml",
+              "RelativeToolTip": "Source\\Resources\\XMLs\\wall-tile-prefabs.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2026-09-01T19:48:23.804Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "floor-tile-prefabs.xml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Resources\\XMLs\\floor-tile-prefabs.xml",
+              "RelativeDocumentMoniker": "Source\\Resources\\XMLs\\floor-tile-prefabs.xml",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Resources\\XMLs\\floor-tile-prefabs.xml",
+              "RelativeToolTip": "Source\\Resources\\XMLs\\floor-tile-prefabs.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2026-09-01T18:12:16.893Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PlayerDataBase.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Character\\Players\\PlayerDataBase.cs",
+              "RelativeDocumentMoniker": "Source\\Scripts\\Character\\Players\\PlayerDataBase.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Character\\Players\\PlayerDataBase.cs",
+              "RelativeToolTip": "Source\\Scripts\\Character\\Players\\PlayerDataBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-01T09:42:54.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Canvas.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\UI\\Canvas.cs",
+              "RelativeDocumentMoniker": "Source\\Scripts\\UI\\Canvas.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\UI\\Canvas.cs",
+              "RelativeToolTip": "Source\\Scripts\\UI\\Canvas.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-01T08:06:04.542Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Camera2D.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Engine\\Camera2D.cs",
+              "RelativeDocumentMoniker": "Source\\Scripts\\Engine\\Camera2D.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Engine\\Camera2D.cs",
+              "RelativeToolTip": "Source\\Scripts\\Engine\\Camera2D.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-01T07:35:18.989Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "GreenCloack.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Character\\Accessories\\Accessory\\GreenCloack.cs",
+              "RelativeDocumentMoniker": "Source\\Scripts\\Character\\Accessories\\Accessory\\GreenCloack.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Character\\Accessories\\Accessory\\GreenCloack.cs",
+              "RelativeToolTip": "Source\\Scripts\\Character\\Accessories\\Accessory\\GreenCloack.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-01T06:41:21.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "accessory-prefabs.xml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Resources\\XMLs\\accessory-prefabs.xml",
+              "RelativeDocumentMoniker": "Source\\Resources\\XMLs\\accessory-prefabs.xml",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Resources\\XMLs\\accessory-prefabs.xml",
+              "RelativeToolTip": "Source\\Resources\\XMLs\\accessory-prefabs.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2026-09-01T06:03:37.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "RedBoots.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Character\\Accessories\\Accessory\\RedBoots.cs",
+              "RelativeDocumentMoniker": "Source\\Scripts\\Character\\Accessories\\Accessory\\RedBoots.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Character\\Accessories\\Accessory\\RedBoots.cs",
+              "RelativeToolTip": "Source\\Scripts\\Character\\Accessories\\Accessory\\RedBoots.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-01T06:01:55.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Entity.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Character\\Entity.cs",
+              "RelativeDocumentMoniker": "Source\\Scripts\\Character\\Entity.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Character\\Entity.cs",
+              "RelativeToolTip": "Source\\Scripts\\Character\\Entity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-01T05:31:48.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "SpriteAttribute.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Graphics\\Auxiliary\\SpriteAttribute.cs",
+              "RelativeDocumentMoniker": "Source\\Scripts\\Graphics\\Auxiliary\\SpriteAttribute.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Graphics\\Auxiliary\\SpriteAttribute.cs",
+              "RelativeToolTip": "Source\\Scripts\\Graphics\\Auxiliary\\SpriteAttribute.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-01T05:15:09.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "character-prefabs.xml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Resources\\XMLs\\character-prefabs.xml",
+              "RelativeDocumentMoniker": "Source\\Resources\\XMLs\\character-prefabs.xml",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Resources\\XMLs\\character-prefabs.xml",
+              "RelativeToolTip": "Source\\Resources\\XMLs\\character-prefabs.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2026-08-30T08:35:50.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AnimatedSprite.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Graphics\\AnimatedSprite.cs",
+              "RelativeDocumentMoniker": "Source\\Scripts\\Graphics\\AnimatedSprite.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Graphics\\AnimatedSprite.cs",
+              "RelativeToolTip": "Source\\Scripts\\Graphics\\AnimatedSprite.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-30T08:10:39.326Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Animation.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Graphics\\Auxiliary\\Animation.cs",
+              "RelativeDocumentMoniker": "Source\\Scripts\\Graphics\\Auxiliary\\Animation.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Graphics\\Auxiliary\\Animation.cs",
+              "RelativeToolTip": "Source\\Scripts\\Graphics\\Auxiliary\\Animation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-30T08:09:59.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Sprite.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Graphics\\Sprite.cs",
+              "RelativeDocumentMoniker": "Source\\Scripts\\Graphics\\Sprite.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Graphics\\Sprite.cs",
+              "RelativeToolTip": "Source\\Scripts\\Graphics\\Sprite.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-30T08:09:04.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TextureAtlas.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Graphics\\Auxiliary\\TextureAtlas.cs",
+              "RelativeDocumentMoniker": "Source\\Scripts\\Graphics\\Auxiliary\\TextureAtlas.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Graphics\\Auxiliary\\TextureAtlas.cs",
+              "RelativeToolTip": "Source\\Scripts\\Graphics\\Auxiliary\\TextureAtlas.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAIAywB8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-30T08:06:36.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "TextureRegion.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Graphics\\Auxiliary\\TextureRegion.cs",
+              "RelativeDocumentMoniker": "Source\\Scripts\\Graphics\\Auxiliary\\TextureRegion.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Graphics\\Auxiliary\\TextureRegion.cs",
+              "RelativeToolTip": "Source\\Scripts\\Graphics\\Auxiliary\\TextureRegion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-30T08:05:57.932Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Layer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Graphics\\Layer.cs",
+              "RelativeDocumentMoniker": "Source\\Scripts\\Graphics\\Layer.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Graphics\\Layer.cs",
+              "RelativeToolTip": "Source\\Scripts\\Graphics\\Layer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T21:35:10.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "AutoloadEquipAttribute.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Character\\Accessories\\AutoloadEquipAttribute.cs",
+              "RelativeDocumentMoniker": "Source\\Scripts\\Character\\Accessories\\AutoloadEquipAttribute.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Character\\Accessories\\AutoloadEquipAttribute.cs",
+              "RelativeToolTip": "Source\\Scripts\\Character\\Accessories\\AutoloadEquipAttribute.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T21:16:46.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PlayerBehavior.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Character\\Players\\PlayerBehavior.cs",
+              "RelativeDocumentMoniker": "Source\\Scripts\\Character\\Players\\PlayerBehavior.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Character\\Players\\PlayerBehavior.cs",
+              "RelativeToolTip": "Source\\Scripts\\Character\\Players\\PlayerBehavior.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAUwAAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T19:23:05.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Accessory.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Character\\Accessories\\Accessory.cs",
+              "RelativeDocumentMoniker": "Source\\Scripts\\Character\\Accessories\\Accessory.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Character\\Accessories\\Accessory.cs",
+              "RelativeToolTip": "Source\\Scripts\\Character\\Accessories\\Accessory.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAYwB4AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T18:35:32.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Character\\Players\\Player.cs",
+              "RelativeDocumentMoniker": "Source\\Scripts\\Character\\Players\\Player.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Character\\Players\\Player.cs",
+              "RelativeToolTip": "Source\\Scripts\\Character\\Players\\Player.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T17:32:18.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DungeonGeneration.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Generate\\DungeonGeneration.cs",
+              "RelativeDocumentMoniker": "Source\\Scripts\\Generate\\DungeonGeneration.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Generate\\DungeonGeneration.cs",
+              "RelativeToolTip": "Source\\Scripts\\Generate\\DungeonGeneration.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAswDYAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T17:07:40.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Tile.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Generate\\Tile.cs",
+              "RelativeDocumentMoniker": "Source\\Scripts\\Generate\\Tile.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Generate\\Tile.cs",
+              "RelativeToolTip": "Source\\Scripts\\Generate\\Tile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T17:01:32.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "main.png - PNG [1024x1348, 32-\u0440\u0430\u0437\u0440\u044F\u0434\u043D\u043E\u0435, PNG]",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Resources\\Sprites\\SpriteSheets\\main.png",
+              "RelativeDocumentMoniker": "Source\\Resources\\Sprites\\SpriteSheets\\main.png",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Resources\\Sprites\\SpriteSheets\\main.png - PNG [1024x1348, 32-\u0440\u0430\u0437\u0440\u044F\u0434\u043D\u043E\u0435, PNG]",
+              "RelativeToolTip": "Source\\Resources\\Sprites\\SpriteSheets\\main.png - PNG [1024x1348, 32-\u0440\u0430\u0437\u0440\u044F\u0434\u043D\u043E\u0435, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-08-29T13:18:14.66Z",
+              "EditorCaption": " - PNG [1024x1348, 32-\u0440\u0430\u0437\u0440\u044F\u0434\u043D\u043E\u0435, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "floor.png - PNG [1024x1088, 32-\u0440\u0430\u0437\u0440\u044F\u0434\u043D\u043E\u0435, PNG]",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Resources\\Sprites\\SpriteSheets\\floor.png",
+              "RelativeDocumentMoniker": "Source\\Resources\\Sprites\\SpriteSheets\\floor.png",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Resources\\Sprites\\SpriteSheets\\floor.png - PNG [1024x1088, 32-\u0440\u0430\u0437\u0440\u044F\u0434\u043D\u043E\u0435, PNG]",
+              "RelativeToolTip": "Source\\Resources\\Sprites\\SpriteSheets\\floor.png - PNG [1024x1088, 32-\u0440\u0430\u0437\u0440\u044F\u0434\u043D\u043E\u0435, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-08-29T13:18:02.129Z",
+              "EditorCaption": " - PNG [1024x1088, 32-\u0440\u0430\u0437\u0440\u044F\u0434\u043D\u043E\u0435, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "icons.png - PNG [1024x64, 32-\u0440\u0430\u0437\u0440\u044F\u0434\u043D\u043E\u0435, PNG]",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Resources\\Sprites\\SpriteSheets\\icons.png",
+              "RelativeDocumentMoniker": "Source\\Resources\\Sprites\\SpriteSheets\\icons.png",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Resources\\Sprites\\SpriteSheets\\icons.png - PNG [1024x64, 32-\u0440\u0430\u0437\u0440\u044F\u0434\u043D\u043E\u0435, PNG]",
+              "RelativeToolTip": "Source\\Resources\\Sprites\\SpriteSheets\\icons.png - PNG [1024x64, 32-\u0440\u0430\u0437\u0440\u044F\u0434\u043D\u043E\u0435, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-08-29T13:17:59.64Z",
+              "EditorCaption": " - PNG [1024x64, 32-\u0440\u0430\u0437\u0440\u044F\u0434\u043D\u043E\u0435, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "gui.png - PNG [1024x1081, 32-\u0440\u0430\u0437\u0440\u044F\u0434\u043D\u043E\u0435, PNG]",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Resources\\Sprites\\SpriteSheets\\gui.png",
+              "RelativeDocumentMoniker": "Source\\Resources\\Sprites\\SpriteSheets\\gui.png",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Resources\\Sprites\\SpriteSheets\\gui.png - PNG [1024x1081, 32-\u0440\u0430\u0437\u0440\u044F\u0434\u043D\u043E\u0435, PNG]",
+              "RelativeToolTip": "Source\\Resources\\Sprites\\SpriteSheets\\gui.png - PNG [1024x1081, 32-\u0440\u0430\u0437\u0440\u044F\u0434\u043D\u043E\u0435, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-08-29T13:17:56.5Z",
+              "EditorCaption": " - PNG [1024x1081, 32-\u0440\u0430\u0437\u0440\u044F\u0434\u043D\u043E\u0435, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "character.png - PNG [1024x2486, 32-\u0440\u0430\u0437\u0440\u044F\u0434\u043D\u043E\u0435, PNG]",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Resources\\Sprites\\SpriteSheets\\character.png",
+              "RelativeDocumentMoniker": "Source\\Resources\\Sprites\\SpriteSheets\\character.png",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Resources\\Sprites\\SpriteSheets\\character.png - PNG [1024x2486, 32-\u0440\u0430\u0437\u0440\u044F\u0434\u043D\u043E\u0435, PNG]",
+              "RelativeToolTip": "Source\\Resources\\Sprites\\SpriteSheets\\character.png - PNG [1024x2486, 32-\u0440\u0430\u0437\u0440\u044F\u0434\u043D\u043E\u0435, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-08-29T07:46:54.348Z",
+              "EditorCaption": " - PNG [1024x2486, 32-\u0440\u0430\u0437\u0440\u044F\u0434\u043D\u043E\u0435, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "feat.png - PNG [1024x768, 32-\u0440\u0430\u0437\u0440\u044F\u0434\u043D\u043E\u0435, PNG]",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Resources\\Sprites\\SpriteSheets\\feat.png",
+              "RelativeDocumentMoniker": "Source\\Resources\\Sprites\\SpriteSheets\\feat.png",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Resources\\Sprites\\SpriteSheets\\feat.png - PNG [1024x768, 32-\u0440\u0430\u0437\u0440\u044F\u0434\u043D\u043E\u0435, PNG]",
+              "RelativeToolTip": "Source\\Resources\\Sprites\\SpriteSheets\\feat.png - PNG [1024x768, 32-\u0440\u0430\u0437\u0440\u044F\u0434\u043D\u043E\u0435, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-08-29T07:44:43.194Z",
+              "EditorCaption": " - PNG [1024x768, 32-\u0440\u0430\u0437\u0440\u044F\u0434\u043D\u043E\u0435, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T07:40:29.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Mouse.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Input\\Mouse.cs",
+              "RelativeDocumentMoniker": "Source\\Scripts\\Input\\Mouse.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Input\\Mouse.cs",
+              "RelativeToolTip": "Source\\Scripts\\Input\\Mouse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T07:39:18.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Keyboard.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Input\\Keyboard.cs",
+              "RelativeDocumentMoniker": "Source\\Scripts\\Input\\Keyboard.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Input\\Keyboard.cs",
+              "RelativeToolTip": "Source\\Scripts\\Input\\Keyboard.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T07:39:03.492Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "InputManager.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Input\\InputManager.cs",
+              "RelativeDocumentMoniker": "Source\\Scripts\\Input\\InputManager.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Input\\InputManager.cs",
+              "RelativeToolTip": "Source\\Scripts\\Input\\InputManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T07:38:51.65Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ImGuiRenderer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\ImGui\\ImGuiRenderer.cs",
+              "RelativeDocumentMoniker": "Source\\Scripts\\ImGui\\ImGuiRenderer.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\ImGui\\ImGuiRenderer.cs",
+              "RelativeToolTip": "Source\\Scripts\\ImGui\\ImGuiRenderer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T07:37:40.594Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "DrawVertDeclaration.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\ImGui\\DrawVertDeclaration.cs",
+              "RelativeDocumentMoniker": "Source\\Scripts\\ImGui\\DrawVertDeclaration.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\ImGui\\DrawVertDeclaration.cs",
+              "RelativeToolTip": "Source\\Scripts\\ImGui\\DrawVertDeclaration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T07:36:41.521Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "DungeonCrawler.csproj",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\DungeonCrawler.csproj",
+              "RelativeDocumentMoniker": "DungeonCrawler.csproj",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\DungeonCrawler.csproj",
+              "RelativeToolTip": "DungeonCrawler.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-08-29T07:35:18.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "GlobalUsing.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\GlobalUsing.cs",
+              "RelativeDocumentMoniker": "Source\\Scripts\\GlobalUsing.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\GlobalUsing.cs",
+              "RelativeToolTip": "Source\\Scripts\\GlobalUsing.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T07:34:27.394Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Core.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Engine\\Core.cs",
+              "RelativeDocumentMoniker": "Source\\Scripts\\Engine\\Core.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Source\\Scripts\\Engine\\Core.cs",
+              "RelativeToolTip": "Source\\Scripts\\Engine\\Core.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAYwCwAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T07:33:58.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Game.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Game.cs",
+              "RelativeDocumentMoniker": "Game.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\DungeonCrawler\\Game.cs",
+              "RelativeToolTip": "Game.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T07:25:01.319Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

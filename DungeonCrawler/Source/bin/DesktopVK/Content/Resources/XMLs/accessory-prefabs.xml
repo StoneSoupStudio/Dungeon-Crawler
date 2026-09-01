@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas>
+	<Texture>sprites/spritesheets/character</Texture>
+	<Regions>
+		<Region name="red-boots" x="427" y="2179" width="16" height="6"/>
+		<Region name="green-cloack" x="187" y="2179" width="20" height="25"/>
+	</Regions>
+</TextureAtlas>
