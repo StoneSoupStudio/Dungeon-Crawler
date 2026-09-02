@@ -21,9 +21,9 @@ internal class Player : Entity
         _accessories = new Accessory[MAX_ACCESSORY];
     }
 
-    public void Update()
+    public void Update(DungeonGeneration dungeon)
     {
-        _behavior.HandlerInput();
+        _behavior.Move(dungeon);
 
         foreach (Accessory accessory in _accessories)
         {

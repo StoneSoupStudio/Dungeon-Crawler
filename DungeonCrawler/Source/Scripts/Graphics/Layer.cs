@@ -1,6 +1,6 @@
 ﻿namespace DungeonCrawler;
 
-public sealed class Layer
+public readonly struct Layer
 {
     private static readonly Dictionary<string, Layer> _layers = new();
 
@@ -29,25 +29,5 @@ public sealed class Layer
         Depth = depth;
 
         _layers.Add(name, this);
-    }
-
-    public static Layer AddLayer(string name, float depth)
-    {
-        return new Layer(name, depth);
-    }
-
-    public static bool TryGetLayer(string name, out Layer layer)
-    {
-        return _layers.TryGetValue(name, out layer);
-    }
-
-    public static Layer GetLayer(string name)
-    {
-        return _layers[name];
-    }
-
-    public static bool RemoveLayer(string name)
-    {
-        return _layers.Remove(name);
     }
 }
