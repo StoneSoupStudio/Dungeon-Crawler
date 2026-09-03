@@ -5,7 +5,7 @@ internal sealed class PlayerDB
     public string Name { get; }
     public RaceType Race { get; }
 
-    public ushort CurrentHealth { get; }
+    public ushort CurrentHealth { get; private set; }
     public ushort MaxHealth { get; private set; }
 
     public byte CurrentMana { get; }
@@ -21,10 +21,13 @@ internal sealed class PlayerDB
 
     public PlayerDB()
     {
-        Name = "ZZZ";
+        Name = "Sr. Aladin Pins";
         Race = RaceType.Human;
 
         FinallyCharacteristic();
+
+        CurrentHealth = MaxHealth;
+        CurrentMana = MaxMana;
     }
 
     private void FirstCharacteristic()
@@ -32,7 +35,8 @@ internal sealed class PlayerDB
         switch (Race)
         {
             case RaceType.Human:
-
+                MaxHealth = 999;
+                MaxMana = byte.MaxValue;
                 break;
             case RaceType.Demon:
 
@@ -78,6 +82,19 @@ internal sealed class PlayerDB
 
     private void FinallyCharacteristic()
     {
+        FirstCharacteristic();
+        CalculateCharacteristic();
+    }
 
+    public void TakeDamage(ushort damage)
+    {
+        if (damage >= CurrentHealth)
+        {
+            CurrentHealth = 0;
+        }
+        else
+        {
+            CurrentHealth -= damage;
+        }
     }
 }

@@ -44,43 +44,97 @@ internal sealed class PlayerBehavior
 
     public void Move(DungeonGeneration dungeon)
     {
-        Point movePoint = _position.ToPoint();
+        Point oldPosition = _position.ToPoint();
+        Point movePoint = oldPosition;
 
         HandlerInput(ref movePoint);
 
-        if (movePoint == _position.ToPoint())
+        if (movePoint == oldPosition)
             return;
 
-        if (!CanMoveTo(dungeon, movePoint))
-            return;
+        int tileX = movePoint.X / Tile.TILE_SIZE;
+        int tileY = movePoint.Y / Tile.TILE_SIZE;
 
-        _position = movePoint.ToVector2();
-    }
-
-    private bool CanMoveTo(DungeonGeneration dungeon, Point position)
-    {
-        int tileX = position.X / Tile.TILE_SIZE;
-        int tileY = position.Y / Tile.TILE_SIZE;
-
-        if (tileX < 0 || tileY < 0 || tileX >= dungeon.Width || tileY >= dungeon.Height)
+        // Проверяем границы
+        if (tileX < 0 || tileY < 0 ||
+            tileX >= dungeon.Width || tileY >= dungeon.Height)
         {
-            return false;
+            return;
         }
 
-        return dungeon.Tiles[tileX, tileY].IsWalkable;
-    }
+        Tile targetTile = dungeon.Tiles[tileX, tileY];
 
+        // ==========================================
+        // АТАКА
+        // ==========================================
+
+        if (targetTile.OccupiedBy is GnomeMage enemy)
+        {
+            enemy.TakeDamage(5);
+
+            Game.State = GameState.EnemyTurn;
+            return;
+        }
+
+        // ==========================================
+        // КЛЕТКА ЗАНЯТА КЕМ-ТО ДРУГИМ
+        // ==========================================
+
+        if (targetTile.OccupiedBy != null)
+            return;
+
+        // ==========================================
+        // ПРОВЕРКА ПРОХОДИМОСТИ
+        // ==========================================
+
+        if (!targetTile.IsWalkable)
+            return;
+
+        // ==========================================
+        // ОСВОБОЖДАЕМ СТАРУЮ КЛЕТКУ
+        // ==========================================
+
+        int oldTileX = oldPosition.X / Tile.TILE_SIZE;
+        int oldTileY = oldPosition.Y / Tile.TILE_SIZE;
+
+        dungeon.Tiles[oldTileX, oldTileY].OccupiedBy = null;
+
+        // ==========================================
+        // ПЕРЕМЕЩАЕМ ИГРОКА
+        // ==========================================
+
+        _position = movePoint.ToVector2();
+
+        // ==========================================
+        // ЗАНИМАЕМ НОВУЮ КЛЕТКУ
+        // ==========================================
+
+        dungeon.Tiles[tileX, tileY].OccupiedBy = this;
+
+        Game.State = GameState.EnemyTurn;
+    }
 
     public void SpawnHeroInDungeon(DungeonGeneration dungeon, Point cell)
     {
         if (cell.X >= 0 && cell.X < dungeon.Width &&
             cell.Y >= 0 && cell.Y < dungeon.Height)
         {
-            _position = new Vector2(cell.X * Tile.TILE_SIZE, cell.Y * Tile.TILE_SIZE);
+            _position = new Vector2(
+                cell.X * Tile.TILE_SIZE + Tile.TILE_SIZE / 2f,
+                cell.Y * Tile.TILE_SIZE + Tile.TILE_SIZE / 2f
+            );
         }
         else
         {
-            _position = new Vector2(dungeon.Width / 2 * Tile.TILE_SIZE, dungeon.Height / 2 * Tile.TILE_SIZE);
+            cell = new Point(
+                dungeon.Width / 2,
+                dungeon.Height / 2
+            );
+            _position = new Vector2(
+                cell.X * Tile.TILE_SIZE + Tile.TILE_SIZE / 2f,
+                cell.Y * Tile.TILE_SIZE + Tile.TILE_SIZE / 2f
+            );
         }
+        dungeon.Tiles[cell.X, cell.Y].OccupiedBy = this;
     }
 }

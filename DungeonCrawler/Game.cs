@@ -17,6 +17,10 @@ public sealed class Game : Core
     private GnomeMage gnomeMage;
     private GnomeMage gnomeMage2;
 
+    private FogOfWar fogOfWar;
+
+    public static GameState State { get; set; }
+
     public Game() : base("Dungeon Crawler", SCREEN_WIDTH, SCREEN_HEIGHT, false)
     {
 
@@ -32,14 +36,15 @@ public sealed class Game : Core
     private void PreInitialize()
     {
         dungeon = new(Content, 30, 30);
-
-        player = new();
-        gnomeMage = new();
-        gnomeMage2 = (GnomeMage)gnomeMage.Clone();
     }
 
     private void LateInitialize()
     {
+        player = new(GraphicsDevice);
+        gnomeMage = new(GraphicsDevice);
+
+        fogOfWar = new(GraphicsDevice, dungeon);
+
         player.Behavior.SpawnHeroInDungeon(dungeon, new(15, 10));
         _camera = new(GraphicsDevice.Viewport);
 
@@ -55,12 +60,21 @@ public sealed class Game : Core
     {
         player.Update(dungeon);
 
-        gnomeMage.Update(player);
-        gnomeMage2.Update(player);
+        switch (State)
+        {
+            case GameState.EnemyTurn:
+                gnomeMage.Update(player, dungeon);
+                State = GameState.PlayerTurn;
+                break;
+
+            default:
+                break;
+        }
 
         Vector2 target = new Vector2(BASE_CAMERA_OFFSET_X, 0) + player.Behavior.Position;
         _camera.Follow(target);
 
+        fogOfWar.Update(player.Behavior.Position);
         base.Update(gameTime);
     }
 
@@ -77,10 +91,10 @@ public sealed class Game : Core
         SpriteBatch.Begin(SpriteSortMode.FrontToBack, BlendState.NonPremultiplied, samplerState: SamplerState.PointClamp, transformMatrix: _camera.Transform);
 
         dungeon.Draw(SpriteBatch);
+        fogOfWar.DrawFog(SpriteBatch, Layer.GUILayer);
 
         player.Draw(SpriteBatch);
         gnomeMage.Draw(SpriteBatch);
-        gnomeMage2.Draw(SpriteBatch);
 
         SpriteBatch.End();
     }

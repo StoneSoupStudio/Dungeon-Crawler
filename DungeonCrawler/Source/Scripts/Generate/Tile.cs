@@ -1,8 +1,14 @@
 ﻿namespace DungeonCrawler;
 
 public enum TileType : byte { Error = byte.MaxValue, None = 0, Floor, Wall, Door, Furniture, Water, Ladder };
+internal enum TileVisibility : byte
+{
+    Hidden,
+    Explored,
+    Visible
+}
 [StructLayout(LayoutKind.Sequential, Pack = 2)]
-internal struct Tile
+internal sealed class Tile
 {
     public const byte TILE_SIZE = 32;
 
@@ -13,7 +19,9 @@ internal struct Tile
     public TileType Type { get; private set; }
     public Layer Layer { get; private set; }
 
-    public readonly bool IsWalkable => Type == TileType.Floor || Type == TileType.Door;
+    public bool IsWalkable => Type == TileType.Floor || Type == TileType.Door;
+    public object? OccupiedBy { get; set; }
+    public TileVisibility Visibility { get; set; } = TileVisibility.Hidden;
 
     public Tile(TextureRegion texture, Vector2 position, TileType type, Layer layer)
     {
@@ -26,7 +34,7 @@ internal struct Tile
         this.Layer = layer;
     }
 
-    public readonly void Draw(SpriteBatch spriteBatch)
+    public void Draw(SpriteBatch spriteBatch)
     {
         _texture.Draw(spriteBatch, _position, Color.White, 0f, CentrePivot(_sourceRectangle), Vector2.One, SpriteEffects.None, Layer.Depth);
     }
