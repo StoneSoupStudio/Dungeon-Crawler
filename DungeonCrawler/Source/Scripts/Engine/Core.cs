@@ -16,7 +16,7 @@ public class Core : Microsoft.Xna.Framework.Game
 
     public static ImGuiRenderer ImGuiRenderer { get; private set; }
 
-    private const byte FPS = 30;
+    private const byte FPS = 45;
 
     public Core(string title, int width, int height, bool fullScreen)
     {

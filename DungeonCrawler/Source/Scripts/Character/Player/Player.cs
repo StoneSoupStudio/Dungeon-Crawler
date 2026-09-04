@@ -3,32 +3,40 @@
 [Sprite("character-prefabs", "white-man")]
 internal class Player : Entity
 {
+    private readonly string _name = "Player";
+    public string Name => _name;
+
     private readonly PlayerBehavior _behavior;
     public PlayerBehavior Behavior => _behavior;
 
-    private readonly PlayerDB _dB;
-    public PlayerDB DB => _dB;
+    private readonly StatDB _dB;
+    public StatDB DB => _dB;
 
     private readonly Accessory[] _accessories;
 
     private readonly Texture2D _pixel;
 
     private const byte MAX_ACCESSORY = 10;
+    private HealthBar _healthBar;
 
-    public Player(GraphicsDevice graphicsDevice)
+    private Inventory _inventory;
+
+    public Player(GraphicsDevice graphicsDevice, ContentManager content)
     {
         _pixel = new Texture2D(graphicsDevice, 1, 1);
         _pixel.SetData(new[] { Color.White });
+        _healthBar = new();
 
         _behavior = new();
-        _dB = new();
+        _dB = new(RaceType.Human);
 
         _accessories = new Accessory[MAX_ACCESSORY];
+        _inventory = new Inventory(content);
     }
 
-    public void Update(DungeonGeneration dungeon)
+    public void Update(Dungeon dungeon, GameTime gameTime)
     {
-        _behavior.Move(dungeon);
+        _behavior.Move(gameTime, dungeon);
 
         foreach (Accessory accessory in _accessories)
         {
@@ -39,28 +47,13 @@ internal class Player : Entity
     public void Draw(SpriteBatch spriteBatch)
     {
         base.Draw(spriteBatch, _behavior.Position, Layer.PlayerLayer);
+        _inventory.Draw(spriteBatch);
 
         foreach (Accessory accessory in _accessories)
         {
             accessory?.Draw(spriteBatch);
         }
 
-        DrawHealthBar(spriteBatch, Layer.GUILayer);
-    }
-
-    private void DrawHealthBar(SpriteBatch spriteBatch, Layer layer)
-    {
-        int barWidth = Tile.TILE_SIZE - 2;
-        int barHeight = 2;
-
-        int healthBarX = (int)_behavior.Position.X + (Tile.TILE_SIZE - barWidth) / 2;
-        int healthBarY = (int)_behavior.Position.Y - barHeight - 2;
-        float healthPercentage = (float)_dB.CurrentHealth / _dB.MaxHealth;
-        int filledWidth = (int)(barWidth * healthPercentage);
-
-        Vector2 origin = new Vector2(barWidth / 2, -Tile.TILE_SIZE / 2 + barHeight);
-
-        spriteBatch.Draw(_pixel, _behavior.Position, new Rectangle(healthBarX, healthBarY, barWidth, barHeight), Color.Red * 0.45f, 0f, origin, 1f, SpriteEffects.None, layer.Depth);
-        spriteBatch.Draw(_pixel, _behavior.Position, new Rectangle(healthBarX, healthBarY, filledWidth, barHeight), Color.Green, 0f, origin, 1f, SpriteEffects.None, layer.Depth + 0.01f);
+        _healthBar.Draw(spriteBatch, Layer.GUILayer, _behavior.Position, _dB.CurrentHealth, _dB.MaxHealth, Color.Red, Color.Green);
     }
 }

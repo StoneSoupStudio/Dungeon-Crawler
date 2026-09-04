@@ -39,3 +39,4 @@ C:\Users\User\source\repos\DungeonCrawler\obj\Release\net9.0\refint\DungeonCrawl
 C:\Users\User\source\repos\DungeonCrawler\obj\Release\net9.0\DungeonCrawler.pdb
 C:\Users\User\source\repos\DungeonCrawler\obj\Release\net9.0\DungeonCrawler.genruntimeconfig.cache
 C:\Users\User\source\repos\DungeonCrawler\obj\Release\net9.0\ref\DungeonCrawler.dll
+C:\Users\User\source\repos\DungeonCrawler\bin\Release\net9.0\Source\Resources\XMLs\gui-prefabs.xml

@@ -1,12 +1,11 @@
 ﻿namespace DungeonCrawler;
 
-internal sealed class PlayerDB
+internal sealed class StatDB
 {
-    public string Name { get; }
     public RaceType Race { get; }
 
-    public ushort CurrentHealth { get; private set; }
-    public ushort MaxHealth { get; private set; }
+    public ushort CurrentHealth { get; internal set; }
+    public ushort MaxHealth { get; internal set; }
 
     public byte CurrentMana { get; }
     public byte MaxMana { get; private set; }
@@ -19,10 +18,9 @@ internal sealed class PlayerDB
     public byte Charisma { get; }
     public sbyte Luck { get; }
 
-    public PlayerDB()
+    public StatDB(RaceType type)
     {
-        Name = "Sr. Aladin Pins";
-        Race = RaceType.Human;
+        Race = type;
 
         FinallyCharacteristic();
 

@@ -2,8 +2,8 @@
 
 internal sealed class Canvas
 {
-    private const ushort BACKGROUND_WIDTH = 9 * Tile.TILE_SIZE;
-    private const byte OFFSET_X = 16;
+    public const ushort BACKGROUND_WIDTH = 9 * Tile.TILE_SIZE;
+    public const byte OFFSET_X = 16;
 
     private Texture2D _pixel;
 
@@ -27,8 +27,9 @@ internal sealed class Canvas
     {
         spriteBatch.Draw(_pixel, _position, _backgroundSourceRect, Color.Black, 0f, Vector2.Zero, 1f, SpriteEffects.None, layer.Depth);
 
-        spriteBatch.DrawString(_uiFont, player.DB.Name, new Vector2(Game.SCREEN_WIDTH - BACKGROUND_WIDTH, OFFSET_X * 0), Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 1f);
+        spriteBatch.DrawString(_uiFont, player.Name, new Vector2(Game.SCREEN_WIDTH - BACKGROUND_WIDTH, OFFSET_X * 0), Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 1f);
         spriteBatch.DrawString(_uiFont, player.DB.Race.ToString(), new Vector2(Game.SCREEN_WIDTH - BACKGROUND_WIDTH, OFFSET_X * 1), Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 1f);
+        spriteBatch.DrawString(_uiFont, "G) Issues", new Vector2(Game.SCREEN_WIDTH - BACKGROUND_WIDTH + BACKGROUND_WIDTH / 2.2f, OFFSET_X * 1), Color.Gold, 0f, Vector2.Zero, 1f, SpriteEffects.None, 1f);
 
         spriteBatch.DrawString(_uiFont, "Health: " + player.DB.CurrentHealth + "/" + player.DB.MaxHealth, new Vector2(Game.SCREEN_WIDTH - BACKGROUND_WIDTH, OFFSET_X * 3), Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 1f);
         spriteBatch.DrawString(_uiFont, "Mana: 50/50", new Vector2(Game.SCREEN_WIDTH - BACKGROUND_WIDTH, OFFSET_X * 4), Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 1f);
@@ -47,9 +48,13 @@ internal sealed class Canvas
         spriteBatch.DrawString(_uiFont, "LVL: 20", new Vector2(Game.SCREEN_WIDTH - BACKGROUND_WIDTH, OFFSET_X * 10), Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 1f);
         spriteBatch.DrawString(_uiFont, "EXP: 999/999", new Vector2(Game.SCREEN_WIDTH - BACKGROUND_WIDTH + BACKGROUND_WIDTH / 4f, OFFSET_X * 10), Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 1f);
         spriteBatch.Draw(_pixel, new Vector2(Game.SCREEN_WIDTH - BACKGROUND_WIDTH + BACKGROUND_WIDTH / 1.58f, OFFSET_X * 10), new Rectangle(0, 0, 12 * 9 - 3, 14), Color.PaleGoldenrod, 0f, Vector2.Zero, 1f, SpriteEffects.None, 1f);
+        
+        spriteBatch.DrawString(_uiFont, "~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~", new Vector2(Game.SCREEN_WIDTH - BACKGROUND_WIDTH, OFFSET_X * 11), Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 1f);
+        //spriteBatch.Draw(_pixel, new Vector2(Game.SCREEN_WIDTH - BACKGROUND_WIDTH, OFFSET_X * 12), new Rectangle(0, 0, BACKGROUND_WIDTH, 6 * Tile.TILE_SIZE - 1), Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 1f);
 
-        spriteBatch.Draw(_pixel, new Vector2(Game.SCREEN_WIDTH - BACKGROUND_WIDTH, OFFSET_X * 12), new Rectangle(0, 0, BACKGROUND_WIDTH, 6 * Tile.TILE_SIZE - 1), Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 1f);
-        spriteBatch.Draw(_pixel, new Vector2(Game.SCREEN_WIDTH - BACKGROUND_WIDTH, OFFSET_X * 24), new Rectangle(0, 0, BACKGROUND_WIDTH, 7 * Tile.TILE_SIZE), Color.Purple, 0f, Vector2.Zero, 1f, SpriteEffects.None, 1f);
+        spriteBatch.DrawString(_uiFont, "~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~", new Vector2(Game.SCREEN_WIDTH - BACKGROUND_WIDTH, OFFSET_X * 23), Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 1f);
+        spriteBatch.Draw(_pixel, new Vector2(Game.SCREEN_WIDTH - BACKGROUND_WIDTH, OFFSET_X * 24), new Rectangle(0, 0, BACKGROUND_WIDTH, 7 * 30), Color.Purple, 0f, Vector2.Zero, 1f, SpriteEffects.None, 1f);
 
+        spriteBatch.DrawString(_uiFont, "g: 9999", new Vector2(Game.SCREEN_WIDTH - BACKGROUND_WIDTH, OFFSET_X * 36 + 12), Color.Goldenrod, 0f, Vector2.Zero, 1f, SpriteEffects.None, 1f);
     }
 }

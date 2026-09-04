@@ -121,6 +121,9 @@
 #begin Resources/XMLs/floor-tile-prefabs.xml
 /copy:Resources/XMLs/floor-tile-prefabs.xml
 
+#begin Resources/XMLs/gui-prefabs.xml
+/copy:Resources/XMLs/gui-prefabs.xml
+
 #begin Resources/XMLs/wall-tile-prefabs.xml
 /copy:Resources/XMLs/wall-tile-prefabs.xml
 

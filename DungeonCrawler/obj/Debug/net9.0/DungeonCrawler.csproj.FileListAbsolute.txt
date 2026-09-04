@@ -39,3 +39,4 @@ C:\Users\User\source\repos\DungeonCrawler\bin\Debug\net9.0\Source\Resources\XMLs
 C:\Users\User\source\repos\DungeonCrawler\bin\Debug\net9.0\Source\Resources\Fonts\UI.xnb
 C:\Users\User\source\repos\DungeonCrawler\bin\Debug\net9.0\Source\Resources\XMLs\wall-tile-prefabs.xml
 C:\Users\User\source\repos\DungeonCrawler\bin\Debug\net9.0\Source\Resources\XMLs\floor-tile-prefabs.xml
+C:\Users\User\source\repos\DungeonCrawler\bin\Debug\net9.0\Source\Resources\XMLs\gui-prefabs.xml

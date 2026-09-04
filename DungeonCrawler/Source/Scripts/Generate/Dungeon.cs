@@ -1,6 +1,6 @@
 ﻿namespace DungeonCrawler;
 
-internal sealed class DungeonGeneration
+internal sealed class Dungeon
 {
     private ushort _width, _height;
     public ushort Width => _width;
@@ -12,7 +12,7 @@ internal sealed class DungeonGeneration
     private TextureAtlas _floorAtlas;
     private TextureAtlas _wallAtlas;
 
-    public DungeonGeneration(ContentManager content, ushort width, ushort height)
+    public Dungeon(ContentManager content, ushort width, ushort height)
     {
         _width = width;
         _height = height;

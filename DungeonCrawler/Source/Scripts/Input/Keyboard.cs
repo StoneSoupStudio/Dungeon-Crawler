@@ -38,4 +38,13 @@ public sealed class Keyboard
     {
         return CurrentState.IsKeyUp(key) && PreviousState.IsKeyDown(key);
     }
+
+    public bool IsAnyKeyDown(Keys[] keys)
+    {
+        for (int i = 0; i < keys.Length; i++)
+            if (Input.Keyboard.IsKeyDown(keys[i]))
+                return true;
+
+        return false;
+    }
 }

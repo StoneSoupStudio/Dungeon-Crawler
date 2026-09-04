@@ -2,12 +2,12 @@
 
 internal sealed class FogOfWar
 {
-    private readonly DungeonGeneration _dungeon;
+    private readonly Dungeon _dungeon;
     private readonly Texture2D _pixel;
 
-    public int SightRange { get; set; } = 6;
+    public int SightRange { get; private set; } = 4;
 
-    public FogOfWar(GraphicsDevice graphicsDevice, DungeonGeneration dungeon)
+    public FogOfWar(GraphicsDevice graphicsDevice, Dungeon dungeon)
     {
         _dungeon = dungeon;
 
@@ -25,10 +25,8 @@ internal sealed class FogOfWar
         if (!IsInsideMap(playerX, playerY))
             return;
 
-        // Клетка игрока всегда видима
         SetVisible(playerX, playerY);
 
-        // 8 октантов shadowcasting
         CastLight(playerX, playerY, 1, 1.0f, 0.0f, 1, 0, 0, 1);
         CastLight(playerX, playerY, 1, 1.0f, 0.0f, 0, 1, 1, 0);
         CastLight(playerX, playerY, 1, 1.0f, 0.0f, 0, -1, 1, 0);
@@ -55,15 +53,8 @@ internal sealed class FogOfWar
     }
 
     private void CastLight(
-        int centerX,
-        int centerY,
-        int row,
-        float startSlope,
-        float endSlope,
-        int xx,
-        int xy,
-        int yx,
-        int yy)
+        int centerX, int centerY, int row, float startSlope, float endSlope,
+        int xx, int xy, int yx, int yy)
     {
         if (startSlope < endSlope)
             return;
@@ -78,13 +69,9 @@ internal sealed class FogOfWar
 
             for (int deltaX = -distance; deltaX <= 0; deltaX++)
             {
-                float leftSlope =
-                    (deltaX - 0.5f) /
-                    (deltaY + 0.5f);
+                float leftSlope = (deltaX - 0.5f) / (deltaY + 0.5f);
 
-                float rightSlope =
-                    (deltaX + 0.5f) /
-                    (deltaY - 0.5f);
+                float rightSlope = (deltaX + 0.5f) / (deltaY - 0.5f);
 
                 if (startSlope < rightSlope)
                     continue;
@@ -92,25 +79,16 @@ internal sealed class FogOfWar
                 if (endSlope > leftSlope)
                     break;
 
-                int currentX =
-                    centerX +
-                    deltaX * xx +
-                    deltaY * xy;
+                int currentX = centerX + deltaX * xx + deltaY * xy;
 
-                int currentY =
-                    centerY +
-                    deltaX * yx +
-                    deltaY * yy;
+                int currentY = centerY + deltaX * yx + deltaY * yy;
 
                 if (!IsInsideMap(currentX, currentY))
                     continue;
 
-                float distanceSquared =
-                    deltaX * deltaX +
-                    deltaY * deltaY;
+                float distanceSquared = deltaX * deltaX + deltaY * deltaY;
 
-                bool withinRange =
-                    distanceSquared <= SightRange * SightRange;
+                bool withinRange = distanceSquared <= SightRange * SightRange;
 
                 if (withinRange)
                     SetVisible(currentX, currentY);
@@ -132,16 +110,7 @@ internal sealed class FogOfWar
                 {
                     blocked = true;
 
-                    CastLight(
-                        centerX,
-                        centerY,
-                        distance + 1,
-                        startSlope,
-                        leftSlope,
-                        xx,
-                        xy,
-                        yx,
-                        yy);
+                    CastLight(centerX, centerY, distance + 1, startSlope, leftSlope, xx, xy, yx, yy);
 
                     newStart = rightSlope;
                 }
@@ -156,7 +125,6 @@ internal sealed class FogOfWar
     {
         Tile tile = _dungeon.Tiles[x, y];
 
-        // Стена закрывает обзор.
         return tile.Type == TileType.Wall;
     }
 
@@ -165,16 +133,12 @@ internal sealed class FogOfWar
         if (!IsInsideMap(x, y))
             return;
 
-        _dungeon.Tiles[x, y].Visibility =
-            TileVisibility.Visible;
+        _dungeon.Tiles[x, y].Visibility = TileVisibility.Visible;
     }
 
     private bool IsInsideMap(int x, int y)
     {
-        return x >= 0 &&
-               y >= 0 &&
-               x < _dungeon.Width &&
-               y < _dungeon.Height;
+        return x >= 0 && y >= 0 && x < _dungeon.Width && y < _dungeon.Height;
     }
 
     public void DrawFog(SpriteBatch spriteBatch, Layer layer)
@@ -188,27 +152,20 @@ internal sealed class FogOfWar
                 if (tile.Visibility == TileVisibility.Visible)
                     continue;
 
-                Vector2 center = new Vector2(
+                Vector2 center = new Vector2
+                (
                     x * Tile.TILE_SIZE + Tile.TILE_SIZE / 2f,
-                    y * Tile.TILE_SIZE + Tile.TILE_SIZE / 2f);
+                    y * Tile.TILE_SIZE + Tile.TILE_SIZE / 2f
+                );
 
                 Color fogColor = tile.Visibility switch
                 {
-                    TileVisibility.Hidden => Color.Black,
+                    TileVisibility.Hidden => Color.Black * 0.95f,
                     TileVisibility.Explored => Color.Black * 0.6f,
                     _ => Color.Transparent
                 };
 
-                spriteBatch.Draw(
-                    _pixel,
-                    center,                              // экранный центр ячейки — как у Tile._position
-                    null,
-                    fogColor,
-                    0f,
-                    new Vector2(0.5f, 0.5f),             // origin в координатах ТЕКСТУРЫ _pixel (1x1), не экрана!
-                    new Vector2(Tile.TILE_SIZE, Tile.TILE_SIZE), // scale растягивает 1x1 до TILE_SIZE
-                    SpriteEffects.None,
-                    layer.Depth);
+                spriteBatch.Draw(_pixel, center, null, fogColor, 0f, new Vector2(0.5f, 0.5f), new Vector2(Tile.TILE_SIZE, Tile.TILE_SIZE), SpriteEffects.None, layer.Depth);
             }
         }
     }

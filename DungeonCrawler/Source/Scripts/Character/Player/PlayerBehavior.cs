@@ -5,57 +5,66 @@ internal sealed class PlayerBehavior
     private Vector2 _position;
     public Vector2 Position => _position;
 
-    private void HandlerInput(ref Point movePoint)
+    private const float MoveCooldown = 0.15f;
+    private float _moveTimer;
+
+    private static readonly (Keys[] Keys, Point Direction)[] _moveBindings =
     {
-        if (Input.Keyboard.IsKeyJustPressed(Keys.W) ||
-            Input.Keyboard.IsKeyJustPressed(Keys.Up) ||
-            Input.Keyboard.IsKeyJustPressed(Keys.NumPad8))
-        {
-            movePoint.Y -= Tile.TILE_SIZE;
-        }
-        else if (Input.Keyboard.IsKeyJustPressed(Keys.S) ||
-                 Input.Keyboard.IsKeyJustPressed(Keys.Down) ||
-                 Input.Keyboard.IsKeyJustPressed(Keys.NumPad2))
-        {
-            movePoint.Y += Tile.TILE_SIZE;
-        }
-        else if (Input.Keyboard.IsKeyJustPressed(Keys.A) ||
-                 Input.Keyboard.IsKeyJustPressed(Keys.Left) ||
-                 Input.Keyboard.IsKeyJustPressed(Keys.NumPad4))
-        {
-            movePoint.X -= Tile.TILE_SIZE;
-        }
-        else if (Input.Keyboard.IsKeyJustPressed(Keys.D) ||
-                 Input.Keyboard.IsKeyJustPressed(Keys.Right) ||
-                 Input.Keyboard.IsKeyJustPressed(Keys.NumPad6))
-        {
-            movePoint.X += Tile.TILE_SIZE;
-        }
+        (new[] { Keys.W, Keys.Up,    Keys.NumPad8 }, new Point( 0, -1)),
+        (new[] { Keys.S, Keys.Down,  Keys.NumPad2 }, new Point( 0,  1)),
+        (new[] { Keys.A, Keys.Left,  Keys.NumPad4 }, new Point(-1,  0)),
+        (new[] { Keys.D, Keys.Right, Keys.NumPad6 }, new Point( 1,  0)),
+        (new[] { Keys.NumPad7 },                     new Point(-1, -1)),
+        (new[] { Keys.NumPad9 },                     new Point( 1, -1)),
+        (new[] { Keys.NumPad1 },                     new Point(-1,  1)),
+        (new[] { Keys.NumPad3 },                     new Point( 1,  1)),
+    };
 
-        if (Input.Keyboard.IsKeyJustPressed(Keys.NumPad1))
-            movePoint += new Point(-Tile.TILE_SIZE, Tile.TILE_SIZE);
-        else if (Input.Keyboard.IsKeyJustPressed(Keys.NumPad3))
-            movePoint += new Point(Tile.TILE_SIZE, Tile.TILE_SIZE);
-        else if (Input.Keyboard.IsKeyJustPressed(Keys.NumPad7))
-            movePoint += new Point(-Tile.TILE_SIZE, -Tile.TILE_SIZE);
-        else if (Input.Keyboard.IsKeyJustPressed(Keys.NumPad9))
-            movePoint += new Point(Tile.TILE_SIZE, -Tile.TILE_SIZE);
-    }
-
-    public void Move(DungeonGeneration dungeon)
+    private void HandlerInput(ref Point moveDelta, GameTime gameTime)
     {
-        Point oldPosition = _position.ToPoint();
-        Point movePoint = oldPosition;
+        moveDelta = Point.Zero;
 
-        HandlerInput(ref movePoint);
+        _moveTimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-        if (movePoint == oldPosition)
+        if (_moveTimer < MoveCooldown)
             return;
 
-        int tileX = movePoint.X / Tile.TILE_SIZE;
-        int tileY = movePoint.Y / Tile.TILE_SIZE;
+        Point direction = Point.Zero;
 
-        // Проверяем границы
+        foreach (var (keys, dir) in _moveBindings)
+        {
+            if (Input.Keyboard.IsAnyKeyDown(keys))
+            {
+                direction = dir;
+                break;
+            }
+        }
+
+        if (direction == Point.Zero)
+            return;
+
+        moveDelta = new Point(
+            direction.X * Tile.TILE_SIZE,
+            direction.Y * Tile.TILE_SIZE);
+
+        _moveTimer = 0f;
+    }
+
+    public void Move(GameTime gameTime, Dungeon dungeon)
+    {
+        Point oldPosition = _position.ToPoint();
+
+        Point moveDelta = Point.Zero;
+        HandlerInput(ref moveDelta, gameTime);
+
+        if (moveDelta == Point.Zero)
+            return;
+
+        Point newPosition = oldPosition + moveDelta;
+
+        int tileX = newPosition.X / Tile.TILE_SIZE;
+        int tileY = newPosition.Y / Tile.TILE_SIZE;
+
         if (tileX < 0 || tileY < 0 ||
             tileX >= dungeon.Width || tileY >= dungeon.Height)
         {
@@ -64,57 +73,32 @@ internal sealed class PlayerBehavior
 
         Tile targetTile = dungeon.Tiles[tileX, tileY];
 
-        // ==========================================
-        // АТАКА
-        // ==========================================
-
         if (targetTile.OccupiedBy is GnomeMage enemy)
         {
             enemy.TakeDamage(5);
-
             Game.State = GameState.EnemyTurn;
             return;
         }
 
-        // ==========================================
-        // КЛЕТКА ЗАНЯТА КЕМ-ТО ДРУГИМ
-        // ==========================================
-
         if (targetTile.OccupiedBy != null)
             return;
 
-        // ==========================================
-        // ПРОВЕРКА ПРОХОДИМОСТИ
-        // ==========================================
-
         if (!targetTile.IsWalkable)
             return;
-
-        // ==========================================
-        // ОСВОБОЖДАЕМ СТАРУЮ КЛЕТКУ
-        // ==========================================
 
         int oldTileX = oldPosition.X / Tile.TILE_SIZE;
         int oldTileY = oldPosition.Y / Tile.TILE_SIZE;
 
         dungeon.Tiles[oldTileX, oldTileY].OccupiedBy = null;
 
-        // ==========================================
-        // ПЕРЕМЕЩАЕМ ИГРОКА
-        // ==========================================
-
-        _position = movePoint.ToVector2();
-
-        // ==========================================
-        // ЗАНИМАЕМ НОВУЮ КЛЕТКУ
-        // ==========================================
+        _position = newPosition.ToVector2();
 
         dungeon.Tiles[tileX, tileY].OccupiedBy = this;
 
         Game.State = GameState.EnemyTurn;
     }
 
-    public void SpawnHeroInDungeon(DungeonGeneration dungeon, Point cell)
+    public void Spawn(Dungeon dungeon, Point cell)
     {
         if (cell.X >= 0 && cell.X < dungeon.Width &&
             cell.Y >= 0 && cell.Y < dungeon.Height)

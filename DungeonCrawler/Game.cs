@@ -8,15 +8,21 @@ public sealed class Game : Core
 
     public const byte BASE_CAMERA_OFFSET_X = 5 * Tile.TILE_SIZE;
 
-    private DungeonGeneration dungeon;
+    private Dungeon dungeon;
     private Canvas canvas;
 
     private Camera2D _camera;
 
     private Player player;
-    private GnomeMage gnomeMage;
-    private GnomeMage gnomeMage2;
 
+    private Enemy gnomeMage;
+    private Enemy gnomeBarbarian;
+    private Enemy gnomePriest;
+    private Enemy gnomeHoly;
+
+    private List<Enemy> _enemies;
+
+    private Minimap minimap;
     private FogOfWar fogOfWar;
 
     public static GameState State { get; set; }
@@ -29,24 +35,39 @@ public sealed class Game : Core
     protected override void Initialize()
     {
         PreInitialize();
+
         base.Initialize();
+
         LateInitialize();
     }
 
     private void PreInitialize()
     {
-        dungeon = new(Content, 30, 30);
+        dungeon = new(Content, 50, 50);
     }
 
     private void LateInitialize()
     {
-        player = new(GraphicsDevice);
-        gnomeMage = new(GraphicsDevice);
+        player = new(GraphicsDevice, Content);
+
+        gnomeMage = new GnomeMage();
+        gnomeBarbarian = new GnomeBarbarian();
+        gnomePriest = new GnomePriest();
+        gnomeHoly = new GnomeHoly();
+
+        _enemies = new List<Enemy> { gnomeMage, gnomeBarbarian, gnomePriest, gnomeHoly };
 
         fogOfWar = new(GraphicsDevice, dungeon);
 
-        player.Behavior.SpawnHeroInDungeon(dungeon, new(15, 10));
+        player.Behavior.Spawn(dungeon, new(25, 25));
+
+        gnomeMage.Spawn(dungeon, new(10, 10));
+        gnomeBarbarian.Spawn(dungeon, new(15, 12));
+        gnomePriest.Spawn(dungeon, new(12, 10));
+        gnomeHoly.Spawn(dungeon, new(11, 12));
+
         _camera = new(GraphicsDevice.Viewport);
+        minimap = new(GraphicsDevice, dungeon);
 
         canvas = new(GraphicsDevice, Content);
     }
@@ -58,12 +79,16 @@ public sealed class Game : Core
 
     protected override void Update(GameTime gameTime)
     {
-        player.Update(dungeon);
+        player.Update(dungeon, gameTime);
+        minimap.Update(SpriteBatch);
 
         switch (State)
         {
             case GameState.EnemyTurn:
-                gnomeMage.Update(player, dungeon);
+
+                //foreach (Enemy enemy in _enemies)
+                   // enemy.Update(dungeon, ref player);
+
                 State = GameState.PlayerTurn;
                 break;
 
@@ -92,18 +117,22 @@ public sealed class Game : Core
 
         dungeon.Draw(SpriteBatch);
         fogOfWar.DrawFog(SpriteBatch, Layer.GUILayer);
+        minimap.MarkDirty();
 
         player.Draw(SpriteBatch);
-        gnomeMage.Draw(SpriteBatch);
+
+        foreach (Enemy enemy in _enemies)
+            enemy.Draw(SpriteBatch);
 
         SpriteBatch.End();
     }
 
     private void DrawUI()
     {
-        SpriteBatch.Begin(SpriteSortMode.Texture, samplerState: SamplerState.PointClamp);
+        SpriteBatch.Begin(SpriteSortMode.FrontToBack, samplerState: SamplerState.PointClamp);
 
         canvas.Draw(SpriteBatch, Layer.UILayer, player);
+        minimap.Draw(SpriteBatch, player.Behavior.Position);
 
         SpriteBatch.End();
     }

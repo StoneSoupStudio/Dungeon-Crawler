@@ -3,7 +3,7 @@
 internal enum RaceType : byte { Human, Demon };
 internal abstract class Entity
 {
-    protected Sprite? _sprite;
+    private Sprite? _sprite;
 
     protected Entity()
     {
